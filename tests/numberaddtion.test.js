@@ -15,3 +15,8 @@ test('should return sum of two numbers', () => {
 
     expect(addNumbers("1,5")).toBe(6)
 })
+
+test('should return sum of any numbers passed as string with comma seperated', () => {
+
+    expect(addNumbers("1,4,5,6")).toBe(16)
+})
