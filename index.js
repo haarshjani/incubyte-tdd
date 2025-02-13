@@ -23,13 +23,20 @@ const addNumbers = (stringNumber) => {
     
     const nums = stringNumber.split(/[\n,]/).map((number) => parseInt(number))
 
+    const negativeNums = nums.filter((num)=> num < 0)
+
+    // console.log(negativeNums)
+    if(negativeNums.length > 0) {
+        throw new Error(`Negative numbers not allowed: ${negativeNums.join(',')}`)
+    }
+
     const sum = nums.reduce((sum, num) => sum+ num,0)
 
     return sum
 }
 
 
-// addNumbers("1\n2,3");
+//  addNumbers("1,2,-3, -4");
 
 module.exports = {
     addNumbers
