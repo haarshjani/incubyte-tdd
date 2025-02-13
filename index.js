@@ -6,7 +6,8 @@ const addNumbers = (stringNumber) => {
     if(!stringNumber){
         return 0;
     }
-    return null
+
+    return parseInt(stringNumber)
 }
 
 module.exports = {
