@@ -8,7 +8,7 @@ const addNumbers = (stringNumber) => {
     }
     const nums = stringNumber.split(',').map((number) => parseInt(number))
 
-    const sum = nums[0] + (nums[1] || 0)
+    const sum = nums.reduce((sum, num) => sum+ num,0)
 
     return sum
 }
