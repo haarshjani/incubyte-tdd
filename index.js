@@ -14,12 +14,16 @@ const addNumbers = (stringNumber) => {
         const numbers = stringNumber.split("\n")
         deliminator = numbers[0].slice(2)
         stringNumber = numbers.slice(1).join("\n") 
+        
     }
 
-    stringNumber = stringNumber.replace(deliminator, ",")
- 
+    
 
-    // console.log(deliminator)
+    // console.log({deliminator, stringNumber})
+
+    stringNumber = stringNumber.replaceAll(deliminator, ",")
+
+    // console.log({stringNumber})
     
     const nums = stringNumber.split(/[\n,]/).map((number) => parseInt(number))
 
@@ -42,7 +46,7 @@ const addNumbers = (stringNumber) => {
 }
 
 
-//  addNumbers("1,2,-3, -4");
+//addNumbers("//***\n1***2***3")
 
 module.exports = {
     addNumbers

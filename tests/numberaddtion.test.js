@@ -44,5 +44,5 @@ test('Numbers bigger than 1000 should be ignored ',() => {
 
 test('Delimiters can be of any length with the following format', () => {
 
-    expect(addNumbers("//[***]\n1***2***3")).toBe(6)
+    expect(addNumbers("//***\n1***2***3")).toBe(6)
 })
