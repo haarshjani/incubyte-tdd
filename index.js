@@ -6,8 +6,11 @@ const addNumbers = (stringNumber) => {
     if(!stringNumber){
         return 0;
     }
+    const nums = stringNumber.split(',').map((number) => parseInt(number))
 
-    return parseInt(stringNumber)
+    const sum = nums[0] + (nums[1] || 0)
+
+    return sum
 }
 
 module.exports = {
