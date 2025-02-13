@@ -29,8 +29,14 @@ const addNumbers = (stringNumber) => {
     if(negativeNums.length > 0) {
         throw new Error(`Negative numbers not allowed: ${negativeNums.join(',')}`)
     }
+    
 
-    const sum = nums.reduce((sum, num) => sum+ num,0)
+    const sum = nums.reduce((sum, num) => {
+        if(num >100){
+            return sum 
+        }
+        return sum+ num
+    },0)
 
     return sum
 }
