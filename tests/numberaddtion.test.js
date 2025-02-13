@@ -1,3 +1,4 @@
+const { execOnce } = require("next/dist/shared/lib/utils.js")
 const  { addNumbers } =  require("../index.js")
 
 
@@ -29,4 +30,9 @@ test('should consider new line between numbers as separator',() => {
 test('should handle the deliminator looks like this: "//[delimiter]\n[numbers…] ', () => {
 
     expect(addNumbers('//;\n1;2')).toBe(3)
+})
+
+test('should throw exception if there is negative number in the string', () => {
+        expect(addNumbers("1,2,-3,-4")).toThrow("Negative numbers not allowed: -3,-4")
+
 })
