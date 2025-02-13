@@ -36,3 +36,8 @@ test('should throw exception if there is negative number in the string', () => {
         expect(addNumbers("1,2,-3,-4")).toThrow("Negative numbers not allowed: -3,-4")
 
 })
+
+test('Numbers bigger than 1000 should be ignored ',() => {
+
+    expect(addNumbers("2,1001")).toBe(2)
+})
