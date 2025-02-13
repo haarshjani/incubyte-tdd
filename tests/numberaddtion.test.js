@@ -25,3 +25,8 @@ test('should consider new line between numbers as separator',() => {
 
     expect(addNumbers("1\n2,3")).toBe(6)
 })
+
+test('should hanle the deliminator looks like this: "//[delimiter]\n[numbers…] ', () => {
+
+    expect(addNumbers('//;\n1;2')).toBe(3)
+})
