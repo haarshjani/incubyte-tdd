@@ -46,3 +46,8 @@ test('Delimiters can be of any length with the following format', () => {
 
     expect(addNumbers("//***\n1***2***3")).toBe(6)
 })
+
+test('Allow multiple delimiters like this: “//[delim1][delim2]\n”', () => {
+
+    expect(addNumbers("//[*][%]\n1*2%3")).toBe(6)
+})

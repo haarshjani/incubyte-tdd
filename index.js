@@ -19,11 +19,11 @@ const addNumbers = (stringNumber) => {
 
     
 
-    // console.log({deliminator, stringNumber})
+    console.log({deliminator, stringNumber})
 
     stringNumber = stringNumber.replaceAll(deliminator, ",")
 
-    // console.log({stringNumber})
+    console.log({stringNumber})
     
     const nums = stringNumber.split(/[\n,]/).map((number) => parseInt(number))
 
